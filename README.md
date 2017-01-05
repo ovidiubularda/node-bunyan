@@ -113,6 +113,12 @@ log.info('hi');
 log.warn({lang: 'fr'}, 'au revoir');
 ```
 
+**Fork feature**
+You can also provide custom properties. All the objects with isMeta property will be parsed in the current log:
+```js
+log.info('hi', { isMeta: true, text: 'custom prop' });
+```
+
 All loggers must provide a "name". This is somewhat akin to the log4j logger
 "name", but Bunyan doesn't do hierarchical logger names.
 
